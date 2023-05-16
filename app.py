@@ -17,7 +17,7 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 # 1: serious injury, 2: Slight injury, 0: Fatal Injury
 
 st.set_page_config(page_title="Accident Severity Prediction App",
-        page_icon="🚧", layout="wide")
+        page_icon="ðŸš§", layout="wide")
 
 #creating option list for dropdown menu
 options_day = ['Sunday', "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
@@ -49,7 +49,7 @@ options_acc_area = ['Other', 'Office areas', 'Residential areas', ' Church areas
 features = ['Number_of_vehicles_involved','Number_of_casualties','Hour_of_Day','Type_of_collision','Age_band_of_driver','Sex_of_driver',
     'Educational_level','Service_year_of_vehicle','Day_of_week','Area_accident_occured']
     # Give a title to web app using html syntax
-st.markdown("<h1 style='text-align: center;'>Accident Severity Prediction App 🚧</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>Accident Severity Prediction App ðŸš§</h1>", unsafe_allow_html=True)
 
 # define a main() function to take inputs from user in form based approach
 def main():
@@ -84,7 +84,7 @@ def main():
        prediction = model.predict(pred_arr)
         
        if prediction == 0:
-           st.write(f"The severity prediction is fatal injury⚠")
+           st.write(f"The severity prediction is fatal injuryâš ")
        elif prediction == 1:
            st.write(f"The severity prediction is serious injury")
        else:
@@ -96,12 +96,11 @@ def main():
        [Kaggle](https://www.kaggle.com/avikumart) 
        """)
        a,b,c = st.columns([0.2,0.6,0.2])
-with b:
- st.image("banner-picture.jpeg", use_column_width=True)
+st.image("banner-picture.jpeg", use_column_width=True)
 
 
 # description about the project and code files       
-st.subheader("🧾Description:")
+st.subheader("ðŸ§¾Description:")
 st.text("""This data set is collected from Addis Ababa Sub-city police departments for master's research work. 
 The data set has been prepared from manual records of road traffic accidents of the year 2017-20. 
 All the sensitive information has been excluded during data encoding and finally it has 32 features and 12316 instances of the accident.
@@ -110,7 +109,7 @@ Then it is preprocessed and for identification of major causes of the accident b
 
 st.markdown("Source of the dataset: [Click Here](https://www.narcis.nl/dataset/RecordID/oai%3Aeasy.dans.knaw.nl%3Aeasy-dataset%3A191591)")
 
-st.subheader("🧭 Problem Statement:")
+st.subheader("ðŸ§­ Problem Statement:")
 st.text("""The target feature is Accident_severity which is a multi-class variable. 
 The task is to classify this variable based on the other 31 features step-by-step by going through each day's task. 
 The metric for evaluation will be f1-score
